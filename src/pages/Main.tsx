@@ -42,8 +42,6 @@ function Main() {
       <div>rr</div>
       <div>rr</div>
       <div>rr</div>
-      <div>rr</div>
-      <div>rr</div>
       <div>4</div>
       <div>3</div>
       <div>2</div>

@@ -11,6 +11,9 @@ function Header() {
       <div>
         <Link to="/sub">Sub</Link>
       </div>
+      <div>
+        <Link to="/counter">Counter</Link>
+      </div>
     </S.Wrapper>
   );
 }
@@ -25,6 +28,9 @@ const S = {
     left: 0;
     top: 0;
     background-color: red;
+    div {
+      margin: 2rem;
+    }
   `,
 };
 
