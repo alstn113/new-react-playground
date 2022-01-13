@@ -1,8 +1,18 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import { flexCenter } from "../shared/styled";
 
 function Header() {
-  return <S.Wrapper></S.Wrapper>;
+  return (
+    <S.Wrapper>
+      <div>
+        <Link to="/">Main</Link>
+      </div>
+      <div>
+        <Link to="/sub">Sub</Link>
+      </div>
+    </S.Wrapper>
+  );
 }
 
 const S = {

@@ -3,7 +3,7 @@ import axios from "axios";
 const token = localStorage.getItem("token");
 
 const client = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_ENDPOINT,
+  baseURL: process.env.REACT_APP_ENDPOINT,
   withCredentials: true,
   headers: { Authorization: token ? `Bearer ${token}` : "" },
 });
