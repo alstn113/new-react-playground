@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
-import { useRef, useState } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { uploadImage } from "../api/image";
 
 function ImageUpload() {
-  const [image, setImage] = useState();
-  const [PImage, setPImage] = useState("/images/blank.png");
+  const [image, setImage] = useState<File>();
+  const [PImage, setPImage] = useState<string>("/images/blank.png");
   const inputEl = useRef<HTMLInputElement>(null);
   const onButtonClick = () => {
     inputEl.current?.click();
@@ -22,8 +22,8 @@ function ImageUpload() {
       uploadImage(formData);
     }
   };
-  const changeImageHandler = (e: any) => {
-    const file = e.target.files[0];
+  const changeImageHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const file: File = (e.target.files as FileList)[0];
     if (file) {
       const fileReader = new FileReader();
       fileReader.readAsDataURL(file);
