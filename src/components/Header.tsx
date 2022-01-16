@@ -14,6 +14,9 @@ function Header() {
       <div>
         <Link to="/counter">Counter</Link>
       </div>
+      <div>
+        <Link to="/image">ImageUpload</Link>
+      </div>
     </S.Wrapper>
   );
 }
