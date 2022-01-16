@@ -17,7 +17,7 @@ function ImageUpload() {
     if (image) {
       formData.append("image", image);
       formData.append("name", "우갸갸");
-      formData.append("price", "400");
+      formData.append("price", 400 as any);
 
       uploadImage(formData);
     }
