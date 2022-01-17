@@ -12,11 +12,15 @@ declare module "@emotion/react" {
       orange1: string;
       orange2: string;
     };
-    typography: {
-      title: css;
-      subtitle: css;
-      label: css;
-      description: css;
+    font: {
+      small: css;
+      medium: css;
+      large: css;
+    };
+    borderRadius: {
+      large: css;
+      medium: css;
+      small: css;
     };
     media: {
       custom: (maxWidth: number) => string;
@@ -25,5 +29,6 @@ declare module "@emotion/react" {
       tablet: string;
       mobile: string;
     };
+    flexCenter: css;
   }
 }

@@ -11,23 +11,30 @@ const color = {
   orange2: "#fd7e14",
 };
 
-const typography = {
-  title: css`
-    font-size: 4rem;
-    font-weight: 800;
-  `,
-  subtitle: css`
-    font-size: 2.5rem;
-    font-weight: 600;
-  `,
-  label: css`
-    font-size: 1rem;
+const font = {
+  small: css`
+    font-size: 1.2rem;
     font-weight: 400;
-    color: red;
   `,
-  description: css`
-    font-size: 1rem;
-    font-weight: 400;
+  medium: css`
+    font-size: 1.6rem;
+    font-weight: 500;
+  `,
+  large: css`
+    font-size: 2rem;
+    font-weight: 700;
+  `,
+};
+
+const borderRadius = {
+  small: css`
+    border-radius: 0.5rem;
+  `,
+  medium: css`
+    border-radius: 1rem;
+  `,
+  large: css`
+    border-radius: 2rem;
   `,
 };
 
@@ -41,10 +48,18 @@ const media = {
   mobile: "screen and (max-width: 500px)",
 };
 
+const flexCenter = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const theme = {
   color,
-  typography,
+  font,
+  borderRadius,
   media,
+  flexCenter,
 };
 
 export default theme;

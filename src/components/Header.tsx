@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import { flexCenter } from "../shared/styled";
 
 function Header() {
   return (
@@ -17,13 +16,16 @@ function Header() {
       <div>
         <Link to="/image">ImageUpload</Link>
       </div>
+      <div>
+        <Link to="/uitest">UI-Test</Link>
+      </div>
     </S.Wrapper>
   );
 }
 
 const S = {
   Wrapper: styled("div")`
-    ${flexCenter};
+    ${({ theme }) => theme.flexCenter}
     width: 100%;
     height: 5rem;
     position: fixed;

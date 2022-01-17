@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { flexCenter } from "../shared/styled";
 
 function Footer() {
   return <S.Wrapper></S.Wrapper>;
@@ -7,7 +6,7 @@ function Footer() {
 
 const S = {
   Wrapper: styled("div")`
-    ${flexCenter}
+    ${({ theme }) => theme.flexCenter}
     width: 100%;
     height: 5rem;
     background-color: red;
