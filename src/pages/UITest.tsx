@@ -1,9 +1,11 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/common/Button";
 import Modal from "../components/common/Modal";
 import { useState } from "react";
+import { signinLocal } from "../api/user";
+import { getProducts } from "../api/product";
 
 function UITest() {
   const [modal, setModal] = useState(false);
@@ -29,14 +31,16 @@ function UITest() {
           Open Modal
         </Button>
         <br />
+        <button onClick={() => signinLocal()}>로그인</button>
+        <button onClick={() => getProducts()}>api</button>
       </S.Body>
       <Footer />
     </S.Wrapper>
   );
 }
 const S = {
-  Wrapper: styled("div")``,
-  Body: styled("div")`
+  Wrapper: styled.div``,
+  Body: styled.div`
     ${({ theme }) => theme.flexCenter}
     flex-direction: column;
     padding-top: 5rem;

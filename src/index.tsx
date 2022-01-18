@@ -1,12 +1,18 @@
-import { ThemeProvider } from "@emotion/react";
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
+
+// recoil
 import { RecoilRoot } from "recoil";
+
+// react-query
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import theme from "./styles/theme";
-import GlobalStyle from "./styles/global-style";
-import App from "./App";
+
+// styled-components
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme";
+import { GlobalStyle } from "./styles/global-style";
 
 const queryClient = new QueryClient();
 

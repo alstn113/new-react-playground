@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
 }
 
 const S = {
-  Wrapper: styled("div")`
+  Wrapper: styled.div`
     ${({ theme }) => theme.flexCenter}
     width: 100%;
     height: 5rem;

@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css, DefaultTheme } from "styled-components";
 
 const color = {
   white: "#ffffff",
@@ -40,12 +40,12 @@ const borderRadius = {
 
 const media = {
   custom: (maxWidth: number): string => {
-    return `screen and (max-width: ${maxWidth}px)`;
+    return `@media (max-width: ${maxWidth}px)`;
   },
-  labtop_L: "screen and (max-width: 1440px)",
-  labtop_S: "screen and (max-width: 768px)",
-  tablet: "screen and (max-width: 1100px)",
-  mobile: "screen and (max-width: 500px)",
+  labtop_L: `@media (max-width: 1440px)`,
+  labtop_S: `@media (max-width: 768px)`,
+  tablet: `@media (max-width: 1100px)`,
+  mobile: `@media (max-width: 500px)`,
 };
 
 const flexCenter = css`
@@ -54,12 +54,10 @@ const flexCenter = css`
   justify-content: center;
 `;
 
-const theme = {
+export const theme: DefaultTheme = {
   color,
   font,
   borderRadius,
   media,
   flexCenter,
 };
-
-export default theme;

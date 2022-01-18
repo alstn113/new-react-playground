@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
-import { MouseEventHandler, ReactChild } from "react";
+import styled from "styled-components";
+import { MouseEventHandler } from "react";
 
 export interface ButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit";
-  children: ReactChild;
+  children: React.ReactNode;
   size?: "large" | "medium" | "small";
   className?: string;
 }
@@ -14,7 +14,7 @@ const Button = ({ onClick, type = "button", children, size = "medium", className
 };
 
 const S = {
-  Container: styled("button")<{ size: string }>`
+  Container: styled.button<{ size: string }>`
     outline: none;
     border: none;
     //border: 0.1rem solid;

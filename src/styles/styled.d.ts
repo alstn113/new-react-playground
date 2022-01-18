@@ -1,7 +1,8 @@
-import "@emotion/react";
+import "styled-components";
+import { css } from "styled-components";
 
-declare module "@emotion/react" {
-  export interface Theme {
+declare module "styled-components" {
+  export interface DefaultTheme {
     color: {
       white: string;
       black: string;

@@ -1,6 +1,6 @@
 import { textCountState, textState } from "../store/counter";
 import { useRecoilState, useRecoilValue } from "recoil";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -27,8 +27,8 @@ function Counter() {
   );
 }
 const S = {
-  Wrapper: styled("div")``,
-  Body: styled("div")`
+  Wrapper: styled.div``,
+  Body: styled.div`
     padding-top: 5rem;
   `,
 };

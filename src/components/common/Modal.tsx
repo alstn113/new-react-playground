@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import Button from "./Button";
 
 export interface ModalProps {
@@ -31,7 +31,7 @@ const Modal = ({ visible, message, onConfirm, onCancel }: ModalProps) => {
 };
 
 const S = {
-  Wrapper: styled("div")`
+  Wrapper: styled.div`
     ${({ theme }) => theme.flexCenter}
     width: 100%;
     height: 100vh;

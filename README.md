@@ -10,8 +10,8 @@ yarn add -D @types/node @types/react @types/react-dom @types/jest
 tsconfig.js 작성
 
 //자주 쓰는 라이브러리
-yarn add react-router-dom axios react-query recoil @emotion/react @emotion/styled emotion-reset
-yarn add -D @types/axios @types/react-router-dom
+yarn add react-router-dom axios react-query recoil styled-component styled-reset
+yarn add -D @types/axios @types/react-router-dom @types/styled-components
 
 //src 정리
 api, components, pages, shared, store, styles, utiles 폴더 생성, .env생성

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { useGetReviews } from "../api/review";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -15,8 +15,8 @@ function Sub() {
 }
 
 const S = {
-  Wrapper: styled("div")``,
-  Body: styled("div")`
+  Wrapper: styled.div``,
+  Body: styled.div`
     padding-top: 5rem;
   `,
 };

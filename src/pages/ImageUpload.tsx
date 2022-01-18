@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { ChangeEvent, useRef, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -11,6 +11,7 @@ function ImageUpload() {
   const onButtonClick = () => {
     inputEl.current?.click();
   };
+
   const submitImage = (e: any) => {
     e.preventDefault();
     const formData = new FormData();
@@ -55,8 +56,8 @@ function ImageUpload() {
 }
 
 const S = {
-  Wrapper: styled("div")``,
-  Body: styled("div")`
+  Wrapper: styled.div``,
+  Body: styled.div`
     padding-top: 5rem;
   `,
 };
