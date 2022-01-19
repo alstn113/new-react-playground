@@ -1,10 +1,12 @@
 import { ChangeEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { addProduct } from "../../api/product";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 function ProductForm() {
+  const navigate = useNavigate();
   const [name, setName] = useState<string>("");
   const [price, setPrice] = useState<number>(0);
   const [deliveryFee, setDeliveryFee] = useState<number>(0);
@@ -28,6 +30,7 @@ function ProductForm() {
     formData.append("stock", stock.toString());
     formData.append("image", image);
     addProduct(formData as any);
+    navigate("/product");
   };
   return (
     <S.Wrapper>

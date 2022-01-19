@@ -5,7 +5,6 @@ import Button from "../components/common/Button";
 import Modal from "../components/common/Modal";
 import { useState } from "react";
 import { signinLocal } from "../api/user";
-import { getProducts } from "../api/product";
 
 function UITest() {
   const [modal, setModal] = useState(false);
@@ -32,7 +31,6 @@ function UITest() {
         </Button>
         <br />
         <button onClick={() => signinLocal()}>로그인</button>
-        <button onClick={() => getProducts()}>api</button>
       </S.Body>
       <Footer />
     </S.Wrapper>

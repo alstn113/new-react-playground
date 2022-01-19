@@ -1,12 +1,28 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useGetProducts } from "../../api/product";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-
+import queryString from "query-string";
 const ProductList = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const query = queryString.parse(location.search);
+  const { data } = useGetProducts(query);
+
+  const test = (order: string): any => {
+    navigate(`/product?order=${order}`);
+  };
+
   return (
     <S.Wrapper>
       <Header />
       <S.Body>
+        <Link to="/product/create">create-product</Link>
+        <button onClick={() => test("priceAsc")}>priceAsc</button>
+        <button onClick={() => test("priceDesc")}>priceDesc</button>
+        <button onClick={() => test("default")}>default</button>
+
         <S.ProductList>
           <thead>
             <tr>
@@ -18,34 +34,15 @@ const ProductList = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Lorem</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-            </tr>
-            <tr>
-              <td>Lorem</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-            </tr>
-            <tr>
-              <td>Lorem</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-            </tr>
-            <tr>
-              <td>Lorem</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-              <td>Ipsum</td>
-              <td>Dolor</td>
-            </tr>
+            {data?.map((product) => (
+              <tr key={product.id}>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td>{product.deliveryFee}</td>
+                <td>{product.stock}</td>
+              </tr>
+            ))}
           </tbody>
         </S.ProductList>
       </S.Body>
@@ -58,6 +55,8 @@ const S = {
   Wrapper: styled.div``,
   Body: styled.div`
     padding-top: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   `,
   ProductList: styled.table`
     width: 100%;
