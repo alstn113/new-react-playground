@@ -1,4 +1,7 @@
-export interface IReview {
-  id: number;
-  title: string;
+export interface IProduct {
+  name: string;
+  price: number;
+  deliveryFee: number;
+  stock: number;
+  image: File;
 }
