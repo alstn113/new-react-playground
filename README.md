@@ -14,6 +14,9 @@ yarn add react-router-dom axios react-query recoil styled-component styled-reset
 yarn add -D @types/axios @types/react-router-dom @types/styled-components
 
 //src 정리
-api, components, pages, shared, store, styles, utiles 폴더 생성, .env생성
+api, components, pages, shared, store, styles, utils 폴더 생성, .env생성
 
 //react-router-dom v6이니까 잘 사용하기
+
+//icons
+yarn add react-icons

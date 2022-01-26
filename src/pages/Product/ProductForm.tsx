@@ -2,7 +2,6 @@ import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { addProduct } from "../../api/product";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 function ProductForm() {
@@ -61,7 +60,6 @@ function ProductForm() {
           </button>
         </form>
       </S.Body>
-      <Footer />
     </S.Wrapper>
   );
 }

@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useGetProducts } from "../../api/product";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import queryString from "query-string";
 const ProductList = () => {
@@ -46,7 +45,6 @@ const ProductList = () => {
           </tbody>
         </S.ProductList>
       </S.Body>
-      <Footer />
     </S.Wrapper>
   );
 };

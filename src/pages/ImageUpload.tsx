@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ChangeEvent, useRef, useState } from "react";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { uploadImage } from "../api/image";
 
@@ -50,7 +49,6 @@ function ImageUpload() {
           </button>
         </form>
       </S.Body>
-      <Footer />
     </S.Wrapper>
   );
 }

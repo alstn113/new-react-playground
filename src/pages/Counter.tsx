@@ -2,7 +2,6 @@ import { textCountState, textState } from "../store/counter";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function Counter() {
   const [text, setText] = useRecoilState(textState);
@@ -22,7 +21,6 @@ function Counter() {
         <br />
         Count: {count}
       </S.Body>
-      <Footer />
     </S.Wrapper>
   );
 }

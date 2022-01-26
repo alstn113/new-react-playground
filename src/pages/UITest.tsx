@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Button from "../components/common/Button";
 import Modal from "../components/common/Modal";
 import { useState } from "react";
@@ -32,7 +31,6 @@ function UITest() {
         <br />
         <button onClick={() => signinLocal()}>로그인</button>
       </S.Body>
-      <Footer />
     </S.Wrapper>
   );
 }
