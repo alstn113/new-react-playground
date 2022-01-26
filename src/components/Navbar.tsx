@@ -123,7 +123,9 @@ const Navbar = () => {
 };
 
 const Nav = styled.nav`
-  font-family: BMEULJIRO;
+  * {
+    font-family: BMEULJIRO;
+  }
   position: fixed;
   z-index: 99;
   background: #242526;
