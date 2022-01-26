@@ -9,114 +9,116 @@ const Navbar = () => {
   const [isDropMenuOpen, setIsDropMenuOpen] = useState<boolean>(false);
   const [isMegaBoxOpen, setIsMegaBoxOpen] = useState<boolean>(false);
   return (
-    <Nav>
-      <Wrapper>
-        <Logo>
-          <Link to="/">MINSOO'S</Link>
-        </Logo>
-        <NavLinks isNavOpen={isNavOpen}>
-          <CloseBtn isNavOpen={isNavOpen} onClick={() => setIsNavOpen(!isNavOpen)}>
-            <FaTimes />
-          </CloseBtn>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">About</Link>
-          </li>
-          <li>
-            <button className="desktop-item">Dropdown Menu</button>
-            <button className="mobile-item" onClick={() => setIsDropMenuOpen(!isDropMenuOpen)}>
-              Dropdown Menu
-            </button>
-            <DropMenu isDropMenuOpen={isDropMenuOpen} className="drop-menu">
-              <li>
-                <Link to="/">Drop Menu 1</Link>
-              </li>
-              <li>
-                <Link to="/">Drop Menu 2</Link>
-              </li>
-              <li>
-                <Link to="/">Drop Menu 3</Link>
-              </li>
-              <li>
-                <Link to="/">Drop Menu 4</Link>
-              </li>
-            </DropMenu>
-          </li>
-          <li>
-            <button className="desktop-item">Mega Menu</button>
-            <button className="mobile-item" onClick={() => setIsMegaBoxOpen(!isMegaBoxOpen)}>
-              Mega Menu
-            </button>
-            <MegaBox isMegaBoxOpen={isMegaBoxOpen} className="mega-box">
-              <Content>
-                <Row>
-                  <img src={"/images/cat.jpg"} alt="" />
-                </Row>
-                <Row>
-                  <header>Design Services</header>
-                  <ul>
-                    <li>
-                      <Link to="/">Graphics</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Vectors</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Business cards</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Custom logo</Link>
-                    </li>
-                  </ul>
-                </Row>
-                <Row>
-                  <header>Email Services</header>
-                  <ul>
-                    <li>
-                      <Link to="/">Personal Email</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Business Email</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Mobile Email</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Web Marketing</Link>
-                    </li>
-                  </ul>
-                </Row>
-                <Row>
-                  <header>Security services</header>
-                  <ul>
-                    <li>
-                      <Link to="/">Site Seal</Link>
-                    </li>
-                    <li>
-                      <Link to="/">VPS Hosting</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Privacy Seal</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Website design</Link>
-                    </li>
-                  </ul>
-                </Row>
-              </Content>
-            </MegaBox>
-          </li>
-          <li>
-            <Link to="/">Feedback</Link>
-          </li>
-        </NavLinks>
-        <Hamburger isNavOpen={isNavOpen} onClick={() => setIsNavOpen(!isNavOpen)}>
-          <FaBars />
-        </Hamburger>
-      </Wrapper>
-    </Nav>
+    <>
+      <Nav>
+        <Wrapper>
+          <Logo>
+            <Link to="/">MINSOO'S</Link>
+          </Logo>
+          <NavLinks isNavOpen={isNavOpen}>
+            <CloseBtn isNavOpen={isNavOpen} onClick={() => setIsNavOpen(!isNavOpen)}>
+              <FaTimes />
+            </CloseBtn>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <button className="desktop-item">Dropdown Menu</button>
+              <button className="mobile-item" onClick={() => setIsDropMenuOpen(!isDropMenuOpen)}>
+                Dropdown Menu
+              </button>
+              <DropMenu isDropMenuOpen={isDropMenuOpen} className="drop-menu">
+                <li>
+                  <Link to="/">Drop Menu 1</Link>
+                </li>
+                <li>
+                  <Link to="/">Drop Menu 2</Link>
+                </li>
+                <li>
+                  <Link to="/">Drop Menu 3</Link>
+                </li>
+                <li>
+                  <Link to="/">Drop Menu 4</Link>
+                </li>
+              </DropMenu>
+            </li>
+            <li>
+              <button className="desktop-item">Mega Menu</button>
+              <button className="mobile-item" onClick={() => setIsMegaBoxOpen(!isMegaBoxOpen)}>
+                Mega Menu
+              </button>
+              <MegaBox isMegaBoxOpen={isMegaBoxOpen} className="mega-box">
+                <Content>
+                  <Row>
+                    <img src={"/images/cat.jpg"} alt="" />
+                  </Row>
+                  <Row>
+                    <header>Design Services</header>
+                    <ul>
+                      <li>
+                        <Link to="/">Graphics</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Vectors</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Business cards</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Custom logo</Link>
+                      </li>
+                    </ul>
+                  </Row>
+                  <Row>
+                    <header>Email Services</header>
+                    <ul>
+                      <li>
+                        <Link to="/">Personal Email</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Business Email</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Mobile Email</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Web Marketing</Link>
+                      </li>
+                    </ul>
+                  </Row>
+                  <Row>
+                    <header>Security services</header>
+                    <ul>
+                      <li>
+                        <Link to="/">Site Seal</Link>
+                      </li>
+                      <li>
+                        <Link to="/">VPS Hosting</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Privacy Seal</Link>
+                      </li>
+                      <li>
+                        <Link to="/">Website design</Link>
+                      </li>
+                    </ul>
+                  </Row>
+                </Content>
+              </MegaBox>
+            </li>
+            <li>
+              <Link to="/">Feedback</Link>
+            </li>
+          </NavLinks>
+          <Hamburger isNavOpen={isNavOpen} onClick={() => setIsNavOpen(!isNavOpen)}>
+            <FaBars />
+          </Hamburger>
+        </Wrapper>
+      </Nav>
+    </>
   );
 };
 
@@ -245,9 +247,9 @@ const DropMenu = styled.ul<{ isDropMenuOpen: boolean }>`
     visibility: visible;
     padding-left: 20px;
     width: 100%;
-    max-height: 0;
     overflow: hidden;
     box-shadow: none;
+    display: none;
     li {
       margin: 0;
       a {
@@ -258,7 +260,7 @@ const DropMenu = styled.ul<{ isDropMenuOpen: boolean }>`
     ${({ isDropMenuOpen }) =>
       isDropMenuOpen &&
       css`
-        max-height: 100%;
+        display: block;
       `}
   }
 `;
@@ -276,13 +278,13 @@ const MegaBox = styled.div<{ isMegaBoxOpen: boolean }>`
     opacity: 1;
     visibility: visible;
     padding: 0 20px;
-    max-height: 0px;
     overflow: hidden;
-    ${({ isMegaBoxOpen }) =>
-      isMegaBoxOpen &&
-      css`
-        max-height: 100%;
-      `}
+    display: none
+      ${({ isMegaBoxOpen }) =>
+        isMegaBoxOpen &&
+        css`
+          display: block;
+        `};
   }
 `;
 const Content = styled.div`
