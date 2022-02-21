@@ -8,6 +8,7 @@ import { SigninRequest } from "../shared/types";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { authState } from "../store/auth";
+import useToggle from "../hooks/useToggle";
 
 interface IForminputs {
   email: string;
@@ -30,6 +31,7 @@ const Login = () => {
   const location = useLocation();
   const from = (location.state as LocationState)?.from?.pathname || "/";
   const [authValue, setAuthValue] = useRecoilState(authState);
+  const [check, toggleCheck] = useToggle("persist", false);
   const {
     register,
     handleSubmit,
@@ -59,6 +61,8 @@ const Login = () => {
         <input {...register("password")} />
         <p>{errors.password?.message}</p>
         <button type="submit">{mutation.isLoading ? "Loading..." : "Submit"}</button>
+        <input type="checkbox" id="persist" onChange={toggleCheck} checked={check} />
+        <label htmlFor="persist">Trust This Device</label>
       </form>
       <div>
         <Link to="/register">회원가입</Link>

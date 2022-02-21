@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Unauthorized from "./pages/Unauthorized";
 import RequireAuth from "./pages/RequireAuth";
 import Users from "./pages/Users";
+import PersistLogin from "./pages/PersistLogin";
 
 function App() {
   return (
@@ -27,9 +28,14 @@ function App() {
           <Route path="/uitest" element={<UITest />} />
 
           {/* we want to protect these routes */}
-          <Route element={<RequireAuth />}>
-            <Route path="/" element={<Main />} />
-            <Route path="/users" element={<Users />} />
+          <Route element={<PersistLogin />}>
+            <Route element={<RequireAuth />}>
+              <Route path="/" element={<Main />} />
+            </Route>
+
+            <Route element={<RequireAuth />}>
+              <Route path="/users" element={<Users />} />
+            </Route>
           </Route>
 
           {/* catch all */}

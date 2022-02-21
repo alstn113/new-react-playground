@@ -1,20 +1,16 @@
-import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
-import { authState } from "../store/auth";
+import useLogout from "../hooks/useLogout";
 
 const Main = () => {
-  const setAuthValue = useSetRecoilState(authState);
-  const axiosPrivate = useAxiosPrivate();
-  const logoutHandler = async () => {
-    await axiosPrivate.post("/auth/logout");
-    setAuthValue({ access_token: "", isLoggedIn: false });
+  const logout = useLogout();
+  const signOut = async () => {
+    await logout();
   };
   return (
     <Text>
       <div>Responsive Dropdown and Mega Menu</div>
       <div>using only HTML & CSS</div>
-      <button onClick={logoutHandler}>로그아웃</button>
+      <button onClick={signOut}>로그아웃</button>
     </Text>
   );
 };

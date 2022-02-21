@@ -6,7 +6,7 @@ const RequireAuth = () => {
   const auth = useRecoilValue(authState);
   const location = useLocation();
 
-  return auth?.isLoggedIn ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
+  return auth?.access_token ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
 };
 
 export default RequireAuth;
