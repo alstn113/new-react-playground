@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
@@ -56,19 +56,19 @@ const Navbar = () => {
                     <img src={"/images/cat.jpg"} alt="" />
                   </Row>
                   <Row>
-                    <header>Design Services</header>
+                    <header>TEST PAGE</header>
                     <ul>
                       <li>
-                        <Link to="/">Graphics</Link>
+                        <Link to="/">Main</Link>
                       </li>
                       <li>
-                        <Link to="/">Vectors</Link>
+                        <Link to="/login">login</Link>
                       </li>
                       <li>
-                        <Link to="/">Business cards</Link>
+                        <Link to="/register">register</Link>
                       </li>
                       <li>
-                        <Link to="/">Custom logo</Link>
+                        <Link to="/users">Users</Link>
                       </li>
                     </ul>
                   </Row>
@@ -118,6 +118,9 @@ const Navbar = () => {
           </Hamburger>
         </Wrapper>
       </Nav>
+      <Container>
+        <Outlet />
+      </Container>
     </>
   );
 };
@@ -381,6 +384,10 @@ const CloseBtn = styled(StyledButton)`
         display: block;
       `}
   }
+`;
+
+const Container = styled("div")`
+  padding-top: 100px;
 `;
 
 export default Navbar;

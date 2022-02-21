@@ -13,6 +13,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import { GlobalStyle } from "./styles/global-style";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +24,11 @@ ReactDOM.render(
         <ReactQueryDevtools initialIsOpen={true} />
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <App />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/*" element={<App />} />
+            </Routes>
+          </BrowserRouter>
         </ThemeProvider>
       </QueryClientProvider>
     </RecoilRoot>

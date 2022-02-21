@@ -6,3 +6,13 @@ export interface IProduct {
   stock: number;
   image: File;
 }
+
+export interface SignupRequest {
+  email: string;
+  password: string;
+}
+
+export interface SigninRequest {
+  email: string;
+  password: string;
+}

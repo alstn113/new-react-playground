@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useGetProducts } from "../../api/product";
-import Header from "../../components/Header";
 import queryString from "query-string";
 const ProductList = () => {
   const location = useLocation();
@@ -15,7 +14,6 @@ const ProductList = () => {
 
   return (
     <S.Wrapper>
-      <Header />
       <S.Body>
         <Link to="/product/create">create-product</Link>
         <button onClick={() => test("priceAsc")}>priceAsc</button>
@@ -53,8 +51,6 @@ const S = {
   Wrapper: styled.div``,
   Body: styled.div`
     padding-top: 5rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
   `,
   ProductList: styled.table`
     width: 100%;

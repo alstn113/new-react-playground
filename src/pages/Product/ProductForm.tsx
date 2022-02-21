@@ -2,7 +2,6 @@ import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { addProduct } from "../../api/product";
-import Header from "../../components/Header";
 
 function ProductForm() {
   const navigate = useNavigate();
@@ -33,7 +32,6 @@ function ProductForm() {
   };
   return (
     <S.Wrapper>
-      <Header />
       <S.Body>
         <form>
           <div>

@@ -20,3 +20,9 @@ api, components, pages, shared, store, styles, utils 폴더 생성, .env생성
 
 //icons
 yarn add react-icons
+
+//react-hook-form
+yarn add react-hook-form yup @hookform/resolvers
+
+//react-router-dom에 관해 참고
+https://www.youtube.com/watch?v=oUZjO00NkhY

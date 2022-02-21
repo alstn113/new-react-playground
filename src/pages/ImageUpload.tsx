@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ChangeEvent, useRef, useState } from "react";
-import Header from "../components/Header";
 import { uploadImage } from "../api/image";
 
 function ImageUpload() {
@@ -38,7 +37,6 @@ function ImageUpload() {
   };
   return (
     <S.Wrapper>
-      <Header />
       <S.Body>
         <form>
           <input type="file" accept="image/*" ref={inputEl} style={{ display: "none" }} onChange={changeImageHandler} />
