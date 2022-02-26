@@ -1,6 +1,6 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { authState } from "../store/auth";
+import { authState } from "../../store/auth";
 
 const RequireAuth = () => {
   const auth = useRecoilValue(authState);

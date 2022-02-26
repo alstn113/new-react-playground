@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
-import useRefreshToken from "../hooks/useRefreshToken";
+import useRefreshToken from "../../hooks/useRefreshToken";
 import { useRecoilValue } from "recoil";
-import { authState } from "../store/auth";
-import useLocalStorage from "../hooks/useLocalStorage";
+import { authState } from "../../store/auth";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const PersistLogin = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);

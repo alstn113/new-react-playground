@@ -17,6 +17,6 @@ export const logout = async () => {
 };
 
 export const refresh = async () => {
-  const { data } = await client.get("/auth/refresh");
+  const { data } = await client.post("/auth/refresh");
   return data;
 };
